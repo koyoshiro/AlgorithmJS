@@ -1,0 +1,23 @@
+# OSX
+.DS_Store
+.idea
+
+# node
+node_modules
+package-lock.json
+
+# CRN
+.__tmp
+.cw
+.happypack
+
+# UT
+coverage/
+junit.xml
+
+# code
+dest
+.vscode/
+.history
+metro.config.js
+
