@@ -6,17 +6,17 @@
  * 返回有给定数组 nums 构建的 最大二叉树 。
  */
 
- /**
+/**
  * @param {number[]} nums
  * @return {TreeNode}
  */
-var constructMaximumBinaryTree = function(nums) {
-    if(nums.length==0) return null;
-    
-    var maxVal = Math.max(...nums);
-    var index = nums.indexOf(maxVal);
-    var root = new TreeNode(maxVal);
-     root.left = constructMaximumBinaryTree(nums.slice(0,index));
-     root.right = constructMaximumBinaryTree(nums.slice(index+1));
-     return root;
+var constructMaximumBinaryTree = function (nums) {
+  if (nums.length == 0) return null;
+
+  var maxVal = Math.max(...nums);
+  var index = nums.indexOf(maxVal);
+  var root = new TreeNode(maxVal);
+  root.left = constructMaximumBinaryTree(nums.slice(0, index));
+  root.right = constructMaximumBinaryTree(nums.slice(index + 1));
+  return root;
 };
